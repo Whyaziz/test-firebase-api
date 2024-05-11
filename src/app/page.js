@@ -1,33 +1,24 @@
 "use client";
 import Image from "next/image";
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import axios from "axios";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [analytics, setAnalytics] = useState(null);
   const [data, setData] = useState([]);
 
-  axios
-    .get(
-      "https://antistunt-ee526-default-rtdb.asia-southeast1.firebasedatabase.app/data-anak.json"
-    )
-    .then(function (response) {
-      console.log(response.data);
-      setData(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  useEffect(() => {
+    axios
+      .get(
+        "https://antistunt-ee526-default-rtdb.asia-southeast1.firebasedatabase.app/data-anak.json"
+      )
+      .then(function (response) {
+        console.log(response.data);
+        setData(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen items-center p-9">
