@@ -1,0 +1,47 @@
+[
+  {
+    "nama_anak": "Ahmad",
+    "tanggal_lahir": "2020-01-01",
+    "umur": 4,
+    "jenis_kelamin": "Laki-laki",
+    "berat_badan": 15.5,
+    "tinggi_badan": 90,
+    "penambahan_berat_badan": 2.5
+  },
+  {
+    "nama_anak": "Bintang",
+    "tanggal_lahir": "2021-07-15",
+    "umur": 2,
+    "jenis_kelamin": "Perempuan",
+    "berat_badan": 12.0,
+    "tinggi_badan": 80,
+    "penambahan_berat_badan": 1.0
+  },
+  {
+    "nama_anak": "Cempaka",
+    "tanggal_lahir": "2022-03-20",
+    "umur": 2,
+    "jenis_kelamin": "Perempuan",
+    "berat_badan": 10.5,
+    "tinggi_badan": 75,
+    "penambahan_berat_badan": 1.5
+  },
+  {
+    "nama_anak": "Dewa",
+    "tanggal_lahir": "2023-11-12",
+    "umur": 0,
+    "jenis_kelamin": "Laki-laki",
+    "berat_badan": 3.2,
+    "tinggi_badan": 75,
+    "penambahan_berat_badan": 1.5
+  },
+  {
+    "nama_anak": "Ester",
+    "tanggal_lahir": "2024-02-05",
+    "umur": 0,
+    "jenis_kelamin": "Perempuan",
+    "berat_badan": 2.8,
+    "tinggi_badan": 75,
+    "penambahan_berat_badan": 2.0
+  }
+]
