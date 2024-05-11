@@ -2,6 +2,7 @@
 import Image from "next/image";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ export default function Home() {
       )
       .then(function (response) {
         console.log(response.data);
-        setData(response.data);
+        setData(Object.values(response.data));
       })
       .catch(function (error) {
         console.error(error);
@@ -23,6 +24,12 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center p-9">
       <h1 className="text-3xl py-10">TEST FIREBASE</h1>
+      <Link
+        className="bg-green-500 rounded-lg self-end px-4 py-2 mb-2 hover:bg-green-700"
+        href="/input-data"
+      >
+        Tambah Data
+      </Link>
       <table className="w-full">
         <thead>
           <tr className=" border border-white">
@@ -36,10 +43,10 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
+          {Object.values(data).map((item, index) => (
             <tr className="text-center border border-white" key={index}>
-              <td className="border border-white p-2">{item.jenis_kelamin}</td>
               <td className="border border-white p-2">{item.nama_anak}</td>
+              <td className="border border-white p-2">{item.jenis_kelamin}</td>
               <td className="border border-white p-2">{item.tanggal_lahir}</td>
               <td className="border border-white p-2">{item.umur}</td>
               <td className="border border-white p-2">{item.berat_badan}</td>
